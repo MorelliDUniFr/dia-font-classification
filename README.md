@@ -61,5 +61,5 @@ The main tasks that we can see are:
 
 We can assign the tasks as follows:
 * Person 1: Data loading and preprocessing
-* Perso 2: Model selection and training
+* Person 2: Model selection and training
 * Both: Model evaluation
