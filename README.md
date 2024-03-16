@@ -37,3 +37,29 @@ From an initial look at the different images, we can say that each font contains
 the words from a font to another are different in general (there could be some cases that some fonts contain the same word,
 but we can't take that as an absolute truth).
 
+### Principal difficulties
+The principal difficulties that we can see are:
+* Correctly loading the dataset
+* Preprocessing the images
+* Choosing the right model
+* Evaluating the model
+
+### Evaluation metrics
+We can use a handful of metrics to evaluate the performance of our model. The ones we are choosing are:
+* Accuracy: the ratio of correctly predicted observation to the total observations
+* Precision: the ratio of correctly predicted positive observations to the total predicted positive observations
+* Recall: the ratio of correctly predicted positive observations to the all observations in actual class
+* F1-score: the weighted average of Precision and Recall
+* Confusion matrix (15x15 matrix): a table used to describe the performance of a classification model
+* ROC curve: a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied
+
+### Workload estimation and task assignment
+The main tasks that we can see are:
+* Data loading and preprocessing
+* Model selection and training
+* Model evaluation
+
+We can assign the tasks as follows:
+* Person 1: Data loading and preprocessing
+* Perso 2: Model selection and training
+* Both: Model evaluation
