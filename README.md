@@ -31,7 +31,7 @@ In the following image, we can see the general workflow needed to be done in ord
 Our first idea is to achieve the font classification using a ML model.
 
 ### First look at the dataset
-The dataset (`font/`) is composed of 15 different folders, each one containing 1'000 images.
+The dataset (`fonts/`) is composed of 15 different folders, each one containing 1'000 images.
 
 From an initial look at the different images, we can say that each font contains images of word of different colors, and
 the words from a font to another are different in general (there could be some cases that some fonts contain the same word,
