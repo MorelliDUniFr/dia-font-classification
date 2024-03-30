@@ -64,6 +64,30 @@ We can assign the tasks as follows:
 * Person 2: Model selection and training
 * Both: Model evaluation
 
+## Workflow
+The following image shows the general workflow needed to solve the task.
+![Flow Diagram](readme_images/flow_diagram.png)
+
+The main steps are:
+* Preprocessing the data
+  * Rescale the images
+  * Normalize the images
+* Loading the dataset
+* Splitting the dataset
+  * Training set
+  * Validation set
+  * Test set
+* Loading the model
+* Training the model
+* Saving the model
+* Evaluating the model
+  * Accuracy
+  * Precision
+  * Recall
+  * F1-score
+  * Confusion matrix
+  * ROC curve
+
 ## Data Loading and Preprocessing
 The first step is to load the data and preprocess it in order to be able to use it in the model.
 
