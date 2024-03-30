@@ -101,7 +101,7 @@ can give a general idea of the time needed to train the model, and which model i
 | MobileNet_V2_V2       | 15'000         | 1'000             | 40       |              |           |        |          |                   |                                    |
 | EfficientNet_B1_V2    | 15'000         | 1'000             | 40       |              |           |        |          |                   |                                    |
 | DenseNet121_V1        | 15'000         | 1'000             | 40       |              |           |        |          |                   |                                    |
-| ResNet18_V1           | 15'000         | 1'000             | 40       | 99.07        | 0.99      | 0.99   | 0.99     | 1287.03           | 32.18                              |
+| ResNet18_V1           | 15'000         | 1'000             | 40       | 99.07        | 0.99      | 0.99   | 0.99     | 1059.28           | 26.48                              |
 
 | Model name | % of total images | # total images | # images per font | Accuracy | Precision | Recall | F1-score |
 |------------|-------------------|----------------|-------------------|----------|-----------|--------|----------|
