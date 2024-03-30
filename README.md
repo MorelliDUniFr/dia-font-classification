@@ -1,18 +1,18 @@
 # Document Image Analysis - Font Classification
 
-## Information
+## 1 Information
 
-### Authors:
+### 1.1 Authors:
 * Davide Morelli
 * Mattéo Bonvin
 
-### Project Overview
+### 1.2 Project Overview
 The goal of this project is to classify words from 15 (initially) different fonts.
 
 In the following image, we can see the general workflow needed to be done in order to solve the task.
 ![Example Image](readme_images/project_steps.PNG)
 
-### Workplan and Milestones
+### 1.3 Workplan and Milestones
 | Date     | What to do                                                                   |
 |----------|------------------------------------------------------------------------------|
 | March 12 | Presentation of challenges, initial discussion and team building             |
@@ -27,24 +27,24 @@ In the following image, we can see the general workflow needed to be done in ord
 | Mai 28   | Conclusion, catch up if needed                                               |
 
 
-## Initial Idea
+## 2 Initial Idea
 Our first idea is to achieve the font classification using a ML model.
 
-### First look at the dataset
+### 2.1 First look at the dataset
 The dataset (`fonts/`) is composed of 15 different folders, each one containing 1'000 images.
 
 From an initial look at the different images, we can say that each font contains images of word of different colors, and
 the words from a font to another are different in general (there could be some cases that some fonts contain the same word,
 but we can't take that as an absolute truth).
 
-### Principal difficulties
+### 2.2 Principal difficulties
 The principal difficulties that we can see are:
 * Correctly loading the dataset
 * Preprocessing the images
 * Choosing the right model
 * Evaluating the model
 
-### Evaluation metrics
+### 2.3 Evaluation metrics
 We can use a handful of metrics to evaluate the performance of our model. The ones we are choosing are:
 * Accuracy: the ratio of correctly predicted observation to the total observations
 * Precision: the ratio of correctly predicted positive observations to the total predicted positive observations
@@ -53,7 +53,7 @@ We can use a handful of metrics to evaluate the performance of our model. The on
 * Confusion matrix (15x15 matrix): a table used to describe the performance of a classification model
 * ROC curve: a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied
 
-### Workload estimation and task assignment
+### 2.4 Workload estimation and task assignment
 The main tasks that we can see are:
 * Data loading and preprocessing
 * Model selection and training
@@ -64,7 +64,7 @@ We can assign the tasks as follows:
 * Person 2: Model selection and training
 * Both: Model evaluation
 
-## Workflow
+## 3 Workflow
 The following image shows the general workflow needed to solve the task.
 ![Flow Diagram](readme_images/flow_diagram.png)
 
@@ -88,18 +88,18 @@ The main steps are:
   * Confusion matrix
   * ROC curve
 
-## Data Loading and Preprocessing
+## 4 Data Loading and Preprocessing
 The first step is to load the data and preprocess it in order to be able to use it in the model.
 
-### Data Loading
+### 4.1 Data Loading
 The data is loaded using the `tf.keras.preprocessing.image_dataset_from_directory` function, which allows us to load the data
 directly from the directory, and to split it into training and validation sets.
 
-### Data Preprocessing
+### 4.2 Data Preprocessing
 The data is preprocessed using the following step:
 * Resizing the images to 32x150 pixels
 
-## Model Selection and Training
+## 5 Model Selection and Training
 The following table shows the different models that we are going to use to solve the task, with some information about them.
 
 | Model name            | # Parameters | GFLOPS |
@@ -127,11 +127,11 @@ Or even with a different number of fonts:
 * 25
 * 40
 
-## Results
+## 6 Results
 For this, we evaluate each model with all the images of the dataset, and then we use the best model to evaluate the potential
 differences between the different sizes of dataset.
 
-### Evaluation of the original dataset
+### 6.1 Evaluation of the original dataset
 In the following table, we can see the results of the different models with the original dataset.
 The time taker for the training is to be taken with a grain of salt, as it can vary a lot depending on the machine used. But it
 can give a general idea of the time needed to train the model, and which model is faster to train.
@@ -150,7 +150,7 @@ The different models are saved as `<model_name>_font_classifier.h5` files in the
 Based on the above table, all the models perform similarly, with the EfficientNet_B1_V2 model being the best one, with a 99.38% accuracy.
 But the time taken to train the model is quite high, so we can use the MobileNet_V3_Small model, which has a 99.02% accuracy, and a smaller training time.
 
-### Evaluation of the different sizes of dataset
+### 6.2 Evaluation of the different sizes of dataset
 In the following table, we can see the results of the MobileNet_V3_Small model with different sizes of dataset.
 
 | Model name         | % of total images | # total images | # images per font | Accuracy | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
@@ -161,7 +161,7 @@ In the following table, we can see the results of the MobileNet_V3_Small model w
 | MobileNet_V3_Small | 50%               | 7'500          | 500               |          |           |        |          |                   |                                    |
 | MobileNet_V3_Small | 100%              | 15'000         | 1'000             |          |           |        |          |                   |                                    |
 
-### Evaluation of the different number of fonts
+### 6.3 Evaluation of the different number of fonts
 In the following table, we can see the results of the MobileNet_V3_Small model with different number of fonts.
 
 | Model name         | # total fonts | # images per font | Accuracy | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
