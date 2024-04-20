@@ -153,20 +153,20 @@ In the following table, we can see the results of the MobileNet_V3_Small model w
 
 In order to achieve this, we need to train the model with different sizes of dataset, and so we change the proportion of the dataset used for training, validation and testing.
 
-| Model name         | % of total images | # total images | # images per font | Accuracy | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
-|--------------------|-------------------|----------------|-------------------|----------|-----------|--------|----------|-------------------|------------------------------------|
-| MobileNet_V3_Small | 5%                | 750            | 50                |          |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 10%               | 1'500          | 100               |          |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 20%               | 3'000          | 200               |          |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 50%               | 7'500          | 500               |          |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 100%              | 15'000         | 1'000             | 99.02    | 0.99      | 0.99   | 0.99     | 583.72            | 14.59                              |
+| Model name         | % of total images | # total images | # images per font | Accuracy (%) | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
+|--------------------|-------------------|----------------|-------------------|--------------|-----------|--------|----------|-------------------|------------------------------------|
+| MobileNet_V3_Small | 5%                | 750            | 50                |              |           |        |          |                   |                                    |
+| MobileNet_V3_Small | 10%               | 1'500          | 100               |              |           |        |          |                   |                                    |
+| MobileNet_V3_Small | 20%               | 3'000          | 200               |              |           |        |          |                   |                                    |
+| MobileNet_V3_Small | 50%               | 7'500          | 500               |              |           |        |          |                   |                                    |
+| MobileNet_V3_Small | 100%              | 15'000         | 1'000             | 99.02        | 0.99      | 0.99   | 0.99     | 583.72            | 14.59                              |
 
 The different models are saved as `<model_name>_font_classifier_<nb_images>images.h5` files in the `models/` folder, so we can use them later to evaluate them.
 
 ### 6.3 Evaluation of the different number of fonts
 In the following table, we can see the results of the MobileNet_V3_Small model with different number of fonts.
 
-| Model name           | # total fonts | # images per font | Accuracy     | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
+| Model name           | # total fonts | # images per font | Accuracy (%) | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
 |----------------------|---------------|-------------------|--------------|-----------|--------|----------|-------------------|------------------------------------|
 | MobileNet_V3_Small   | 5             | 1000              |              |           |        |          |                   |                                    |
 | MobileNet_V3_Small   | 10            | 1000              |              |           |        |          |                   |                                    |
