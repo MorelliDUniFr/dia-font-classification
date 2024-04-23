@@ -123,8 +123,8 @@ Or even with a different number of fonts:
 * 5 fonts
 * 10 fonts
 * 15 fonts (Original dataset)
-* 25
-* 40
+* 25 fonts
+* 40 fonts
 
 ## 6 Results
 For this, we evaluate each model with all the images of the dataset, and then we use the best model to evaluate the potential
