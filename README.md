@@ -179,11 +179,11 @@ In order to achieve this, we need to train the model with different sizes of dat
 
 | Model name         | % of total images | # total images | # images per font | # epochs | Accuracy (%) | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
 |--------------------|-------------------|----------------|-------------------|----------|--------------|-----------|--------|----------|-------------------|------------------------------------|
-| MobileNet_V3_Small | 5%                | 750            | 50                | 60       |              |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 10%               | 1'500          | 100               | 60       |              |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 20%               | 3'000          | 200               | 60       |              |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 50%               | 7'500          | 500               | 60       |              |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 100%              | 15'000         | 1'000             | 60       |              |           |        |          |                   |                                    |
+| MobileNet_V3_Small | 5%                | 750            | 50                | 60       | 59.29        | 0.70      | 0.59   | 0.61     | 666.71            | 11.11                              |
+| MobileNet_V3_Small | 10%               | 1'500          | 100               | 60       | 89.33        | 0.90      | 0.89   | 0.89     | 787.66            | 13.13                              |
+| MobileNet_V3_Small | 20%               | 3'000          | 200               | 60       | 94.89        | 0.95      | 0.95   | 0.95     | 959.33            | 15.99                              |
+| MobileNet_V3_Small | 50%               | 7'500          | 500               | 60       | 97.60        | 0.98      | 0.98   | 0.98     | 1'445.79          | 24.10                              |
+| MobileNet_V3_Small | 100%              | 15'000         | 1'000             | 60       | 99.11        | 0.99      | 0.99   | 0.99     | 2'417.16          | 40.30                              |
 
 The different models are saved as `<model_name>_font_classifier_<nb_images>.h5` files in the `models/DatasetSize/` folder, so we can use them later to evaluate them.
 
