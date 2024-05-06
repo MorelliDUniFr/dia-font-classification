@@ -144,8 +144,8 @@ For this evaluation, we use the original dataset with 15'000 images, and the Mob
 
 | Model name   | Preprocessing method | # total images | # images per font | # epochs | Accuracy (%) | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
 |--------------|----------------------|----------------|-------------------|----------|--------------|-----------|--------|----------|-------------------|------------------------------------|
-| MobileNet_V3 | Rescaling            | 15'000         | 1'000             | 60       | 98.80        | 0.99      | 0.99   | 0.99     | 2'332.99          | 38.88                              |
 | MobileNet_V3 | Binarization         | 15'000         | 1'000             | 60       | 98.00        | 0.98      | 0.98   | 0.98     | 2'455.79          | 40.93                              |
+| MobileNet_V3 | Rescaling            | 15'000         | 1'000             | 60       | 98.80        | 0.99      | 0.99   | 0.99     | 2'332.99          | 38.88                              |
 | MobileNet_V3 | Grayscale Padding    | 15'000         | 1'000             | 60       | 98.53        | 0.99      | 0.99   | 0.99     | ?                 | ?                                  |
 | MobileNet_V3 | Simple Padding       | 15'000         | 1'000             | 60       | 98.84        | 0.99      | 0.99   | 0.99     | ?                 | ?                                  |
 
