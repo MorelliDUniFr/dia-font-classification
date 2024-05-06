@@ -146,8 +146,9 @@ For this evaluation, we use the original dataset with 15'000 images, and the Mob
 |--------------|----------------------|----------------|-------------------|----------|--------------|-----------|--------|----------|-------------------|------------------------------------|
 | MobileNet_V3 | Rescaling            | 15'000         | 1'000             | 60       | 98.80        | 0.99      | 0.99   | 0.99     | 2'332.99          | 38.88                              |
 | MobileNet_V3 | Binarization         | 15'000         | 1'000             | 60       | 98.00        | 0.98      | 0.98   | 0.98     | 2'455.79          | 40.93                              |
-| MobileNet_V3 | Simple Padding       | 15'000         | 1'000             | 60       | 98.84        | 0.99      | 0.99   | 0.99     | ?                 | ?                                  |
 | MobileNet_V3 | Grayscale Padding    | 15'000         | 1'000             | 60       | 98.53        | 0.99      | 0.99   | 0.99     | ?                 | ?                                  |
+| MobileNet_V3 | Simple Padding       | 15'000         | 1'000             | 60       | 98.84        | 0.99      | 0.99   | 0.99     | ?                 | ?                                  |
+
 
 The different models are saved as `<model_name>_font_classifier_<preprocessing_method>.h5` files in the `models/Preprocessing/` folder, so we can use them later to evaluate them.
 
