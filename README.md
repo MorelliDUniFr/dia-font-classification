@@ -99,13 +99,12 @@ directly from the directory, and to split it into training and validation sets.
 
 ### 4.2 Data Preprocessing
 The data is preprocessed using the following step:
-* Resizing the images to 32x150 pixels,
-* Or binarizing the images, but with a rescaling to 32x150 pixels
+* Image adaptation:
+    * Resizing the images to 32x150 pixels
+    * Binarizing the images
+    * Padding the images
+    * Padding the images and binarizing them
 * Normalizing the images
-
-Another option of preprocessing could be done by padding all the images with some white pixels in order to have all the images
-of the same size, but this adds a lot of computation time, since all the images are going to be 5x bigger. So we are not going to
-use this method.
 
 ## 5 Model Selection and Training
 The following table shows the different models that we are going to use to solve the task, with some information about them.
@@ -145,9 +144,9 @@ For this evaluation, we use the original dataset with 15'000 images, and the Mob
 | Model name   | Preprocessing method | # total images | # images per font | # epochs | Accuracy (%) | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
 |--------------|----------------------|----------------|-------------------|----------|--------------|-----------|--------|----------|-------------------|------------------------------------|
 | MobileNet_V3 | Binarization         | 15'000         | 1'000             | 60       | 98.00        | 0.98      | 0.98   | 0.98     | 2'455.79          | 40.93                              |
-| MobileNet_V3 | Grayscale Padding    | 15'000         | 1'000             | 60       | 98.53        | 0.99      | 0.99   | 0.99     | ?                 | ?                                  |
+| MobileNet_V3 | Grayscale Padding    | 15'000         | 1'000             | 60       | 98.53        | 0.99      | 0.99   | 0.99     | 9'292.17          | 154.87                             |
 | MobileNet_V3 | Rescaling            | 15'000         | 1'000             | 60       | 98.80        | 0.99      | 0.99   | 0.99     | 2'332.99          | 38.88                              |
-| MobileNet_V3 | Simple Padding       | 15'000         | 1'000             | 60       | 98.84        | 0.99      | 0.99   | 0.99     | ?                 | ?                                  |
+| MobileNet_V3 | Simple Padding       | 15'000         | 1'000             | 60       | 98.84        | 0.99      | 0.99   | 0.99     | 10'369.64         | 172.83                             |
 
 
 The different models are saved as `<model_name>_font_classifier_<preprocessing_method>.h5` files in the `models/Preprocessing/` folder, so we can use them later to evaluate them.
