@@ -70,9 +70,11 @@ The following image shows the general workflow needed to solve the task.
 
 The main steps are:
 * Preprocessing the data
-  * Three different options:
+  * Four different options:
     * Rescale the images,
-    * Binarize the images
+    * Binarize the images and rescaling them,
+    * Padding the images
+    * Grayscale the images and padding them
   * Normalize the images
 * Loading the dataset
 * Splitting the dataset
