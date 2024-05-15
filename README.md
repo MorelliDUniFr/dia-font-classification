@@ -160,7 +160,7 @@ So for the rest of the evaluation, we are going to use this method.
 
 ### 6.2 Evaluation of the original dataset with different models
 In the following table, we can see the results of the different models with the original dataset.
-The time taker for the training is to be taken with a grain of salt, as it can vary a lot depending on the machine used and what other tasks are running at the same time. But it
+The time taken for the training is to be taken with a grain of salt, as it can vary a lot depending on the machine used and what other tasks are running at the same time. But it
 can give a general idea of the time needed to train the model, and which model is faster to train.
 
 | Model name            | # total images | # images per font | # epochs | Accuracy (%) | Precision | Recall | F1-score | Training time (s) | Medium training time per epoch (s) |
@@ -199,7 +199,5 @@ In the following table, we can see the results of the MobileNet_V3_Small model w
 | MobileNet_V3_Small | 5             | 1'000             | 60       | 99.73        | 1.00      | 1.00   | 1.00     | 1'214.89          | 20.25                              |
 | MobileNet_V3_Small | 10            | 1'000             | 60       | 99.73        | 1.00      | 1.00   | 1.00     | 1'175.12          | 19.59                              |
 | MobileNet_V3_Small | 15            | 1'000             | 60       | 99.07        | 0.99      | 0.99   | 0.99     | 2413.04           | 40.22                              |
-| MobileNet_V3_Small | 25            | 1'000             | 60       |              |           |        |          |                   |                                    |
-| MobileNet_V3_Small | 40            | 1'000             | 60       |              |           |        |          |                   |                                    |
 
 The different models are saved as `<model_name>_font_classifier_<nb_classes>.h5` files in the `models/NbClasses/` folder, so we can use them later to evaluate them.
