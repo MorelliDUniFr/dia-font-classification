@@ -201,3 +201,11 @@ In the following table, we can see the results of the MobileNet_V3_Small model w
 | MobileNet_V3_Small | 15            | 1'000             | 60       | 99.07        | 0.99      | 0.99   | 0.99     | 2413.04           | 40.22                              |
 
 The different models are saved as `<model_name>_font_classifier_<nb_classes>.h5` files in the `models/NbClasses/` folder, so we can use them later to evaluate them.
+
+## 7. Who did what
+
+* Davide :
+   * Rescaling, Binarization, ReadMe, Runtime & Evaluations
+* Mattéo :
+   * Padding, White Padding, Powerpoints & Evaluations
+
